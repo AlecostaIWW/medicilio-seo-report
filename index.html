@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report SEO organico · Medicilio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--navy:#00305B;--primary:#1A8096;--primary-light:#D3EFEE;--primary-mid:#69C8C5;--accent:#00FFD5;--text:#00284D;--muted:#5b6f82;--border:#d9e6e8;--bg:#EEF9F9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3{font-family:'Lato','Segoe UI',system-ui,sans-serif;font-weight:900;margin:0;line-height:1.2}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.header{background:var(--navy);color:#fff;padding:44px 0 56px}
+.header .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.brand{font-family:'Lato',sans-serif;font-weight:900;font-size:20px;margin-bottom:18px}
+.header h1{font-size:34px}
+.meta{margin-top:12px;color:#c9dbe8;font-size:15px}
+.hero{text-align:right}
+.hero .num{font-family:'Lato',sans-serif;font-weight:900;font-size:64px;line-height:1;color:var(--accent)}
+.hero .lab{font-size:15px;margin-top:6px}
+.hero .lab b{color:var(--accent)}
+section{padding:44px 0 4px}
+section h2{font-size:26px;margin-bottom:6px}
+.lead{color:var(--muted);margin:0 0 20px;max-width:760px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-30px}
+.kpi{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px}
+.kpi.main{border-top:4px solid var(--primary)}
+.kpi .v{font-family:'Lato',sans-serif;font-weight:900;font-size:30px;color:var(--primary)}
+.kpi .t{font-size:14px;color:var(--muted)}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px}
+.card p{margin:0 0 12px}.card p:last-child{margin-bottom:0}
+.summary{border-left:4px solid var(--primary)}
+.chart-box{position:relative;height:320px;margin-bottom:18px}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--border);border-radius:16px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:11px 14px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+th{background:var(--primary);color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:14px}
+th:first-child,td.l{text-align:left}
+td.l{white-space:normal;font-weight:700;min-width:190px}
+tr:last-child td{border-bottom:none}
+.barwrap{position:relative;min-width:150px;height:26px;display:flex;align-items:center;justify-content:flex-end}
+.bar{position:absolute;left:0;top:3px;bottom:3px;background:var(--primary-light);border-radius:6px}
+.barwrap span{position:relative;padding-right:4px}
+small{color:var(--muted);font-size:12px}
+.badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:700}
+.delta-up{background:#dcfce7;color:#166534}.delta-down{background:#fee2e2;color:#991b1b}.delta-flat{background:#f3f4f6;color:#6b7280}.delta-new{background:#fef9c3;color:#854d0e}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.grid2 h3{font-size:18px;margin-bottom:8px}
+.pg{font-size:13px;color:var(--muted);margin-top:10px}
+.cmp .big{display:flex;align-items:baseline;gap:12px;margin:6px 0 4px}
+.cmp .big .v{font-family:'Lato',sans-serif;font-weight:900;font-size:34px;color:var(--primary)}
+.cmp .from{color:var(--muted);font-size:14px;margin-bottom:14px}
+.cmp table{margin-top:14px;font-size:14px}
+.cmp th{background:var(--primary-light);color:var(--text)}
+.note{background:var(--primary-light);border-radius:14px;padding:14px 18px;font-size:14px;margin:0 0 14px}
+h3.sub{font-size:18px;margin:22px 0 10px}
+.fn{font-size:13px;color:var(--muted);margin-top:8px}
+footer{margin-top:56px;background:var(--navy);color:#c9dbe8;padding:28px 0;font-size:14px}
+footer .brand{color:#fff;margin:0 0 4px;font-size:18px}
+@media (max-width:760px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.header .wrap{flex-direction:column;align-items:flex-start}.hero{text-align:left}.hero .num{font-size:52px}.header h1{font-size:28px}.grid2{grid-template-columns:1fr}}
+</style></head><body>
+<header class="header"><div class="wrap">
+  <div><div class="brand">medicilio</div><h1>Report SEO organico</h1>
+  <div class="meta">Periodo: ultimi 12 mesi, dettaglio sugli ultimi 3 · Fonte dati: Google Search Console</div></div>
+  <div class="hero"><div class="num">40,5K</div><div class="lab">click negli ultimi 28 giorni · <b>+28%</b> sui 28 precedenti</div></div>
+</div></header>
+
+<main class="wrap">
+<div class="kpi-grid">
+  <div class="kpi main"><div class="v">120.629</div><div class="t">Click negli ultimi 3 mesi</div></div>
+  <div class="kpi"><div class="v">6,94 M</div><div class="t">Impression</div></div>
+  <div class="kpi"><div class="v">1,74%</div><div class="t">CTR medio</div></div>
+  <div class="kpi"><div class="v">5,8</div><div class="t">Posizione media</div></div>
+</div>
+
+<section>
+  <h2>Sintesi</h2>
+  <div class="card summary">
+    <p>In un anno i click organici mensili sono raddoppiati: da circa 20K a ottobre 2025 a oltre 40K al mese da marzo 2026. Negli ultimi 28 giorni il sito ha raggiunto <strong>40,5K click</strong>, il 28% in più rispetto ai 28 giorni precedenti.</p>
+    <p>Circa il 90% del traffico arriva dagli articoli del blog, e due cluster, respiratorio e sonno e diagnostica per immagini, ne generano circa il 73%. Le pagine location crescono del 160% rispetto all'anno scorso, mentre le pagine servizio calano: collegarle meglio al blog è il margine più importante.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Andamento nell'anno</h2>
+  <p class="lead">Click organici mensili, ottobre 2025 – settembre 2026.</p>
+  <div class="card">
+    <div class="chart-box"><canvas id="yearChart"></canvas></div>
+    <p>La crescita è costante fino a maggio, il mese record con 45.681 click. Agosto rallenta (35.157 click) per la stagionalità estiva, e settembre torna sopra i 40K. In totale l'anno chiude con 438.848 click organici.</p>
+    <div class="fn">* Settembre 2026 comprende i dati fino al 28.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Performance per cluster</h2>
+  <p class="lead">Pagine raggruppate per argomento (blog) e per tipologia (home, servizi, location). Dati degli ultimi 3 mesi.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Cluster</th><th>Click</th><th>Quota click</th><th>Impression</th><th>CTR</th><th>Posizione</th></tr></thead>
+    <tbody><tr><td class="l">Blog · respiratorio e sonno</td>
+<td><div class="barwrap"><div class="bar" style="width:100%"></div><span>46.858</span></div></td>
+<td>38,8%</td><td>2.576.088</td><td>1,82%</td><td>4,8</td></tr><tr><td class="l">Blog · diagnostica per immagini</td>
+<td><div class="barwrap"><div class="bar" style="width:88%"></div><span>41.150</span></div></td>
+<td>34,1%</td><td>1.366.925</td><td>3,01%</td><td>5,0</td></tr><tr><td class="l">Blog · cardiologia e vascolare</td>
+<td><div class="barwrap"><div class="bar" style="width:27%"></div><span>12.675</span></div></td>
+<td>10,5%</td><td>1.732.271</td><td>0,73%</td><td>6,8</td></tr><tr><td class="l">Blog · esami del sangue e check-up</td>
+<td><div class="barwrap"><div class="bar" style="width:16%"></div><span>7.486</span></div></td>
+<td>6,2%</td><td>689.467</td><td>1,09%</td><td>5,8</td></tr><tr><td class="l">Home</td>
+<td><div class="barwrap"><div class="bar" style="width:10%"></div><span>4.669</span></div></td>
+<td>3,9%</td><td>28.379</td><td>16,45%</td><td>8,5</td></tr><tr><td class="l">Pagine location</td>
+<td><div class="barwrap"><div class="bar" style="width:8%"></div><span>3.578</span></div></td>
+<td>3,0%</td><td>133.407</td><td>2,68%</td><td>11,3</td></tr><tr><td class="l">Pagine servizio</td>
+<td><div class="barwrap"><div class="bar" style="width:5%"></div><span>2.417</span></div></td>
+<td>2,0%</td><td>288.103</td><td>0,84%</td><td>9,6</td></tr><tr><td class="l">Blog · assistenza domiciliare e telemedicina</td>
+<td><div class="barwrap"><div class="bar" style="width:2%"></div><span>1.047</span></div></td>
+<td>0,9%</td><td>98.156</td><td>1,07%</td><td>6,7</td></tr><tr><td class="l">Istituzionali e sottodomini</td>
+<td><div class="barwrap"><div class="bar" style="width:2%"></div><span>749</span></div></td>
+<td>0,6%</td><td>26.906</td><td>2,78%</td><td>10,7</td></tr></tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h3>Respiratorio e sonno</h3><p>È il cluster più importante del sito, sostenuto da saturazione dell'ossigeno bassa e dispnea. Apnee notturne, BPCO e polisonnografia sono ancora tra la 7ª e la 9ª posizione: è qui lo spazio per salire.</p><div class="pg">Pagine principali: Saturazione ossigeno bassa (32.802), Dispnea sintomi cause e rimedi efficaci (10.308), Bpco broncopneumopatia cronica sintomi (1.344)</div></div>
+    <div class="card"><h3>Diagnostica per immagini</h3><p>Ha il CTR più alto del blog. La guida alla preparazione dell'ecografia addome completo è la pagina con più click del sito, e gli articoli "cosa si vede" sono stabili.</p><div class="pg">Pagine principali: Preparazione eco addome completo (33.539), Eco addome cosa si vede (4.630), Rx torace cosa si vede (1.681)</div></div>
+    <div class="card"><h3>Cardiologia e vascolare</h3><p>Domanda molto ampia (1,73 milioni di impression) ma posizione media ancora a 6,8. Varici, angina pectoris e fibrillazione atriale sono i contenuti trainanti.</p><div class="pg">Pagine principali: Insufficienza venosa varici gambe (4.490), Angina pectoris quando preoccuparsi (3.594), Fibrillazione atriale sintomi cause trattamenti (1.490)</div></div>
+    <div class="card"><h3>Esami del sangue e check-up</h3><p>L'articolo sugli esami del sangue di routine, pubblicato da poco, ha già superato i 6.500 click. Prelievo a domicilio e check-up sono i contenuti più vicini ai servizi.</p><div class="pg">Pagine principali: Esami sangue routine lista completa (6.582), Prelievo del sangue a domicilio (784), Check up oncologico (111)</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Pagine servizio e location rispetto all'anno scorso</h2>
+  <p class="lead">Ultimi 3 mesi confrontati con lo stesso trimestre dell'anno precedente.</p>
+  <div class="grid2">
+    <div class="card cmp">
+      <h3>Pagine servizio</h3>
+      <div class="big"><span class="v">2.417</span><span class="badge delta-down">−28%</span></div>
+      <div class="from">click, da 3.374 · posizione media da 11,0 a 9,6</div>
+      <p>Le posizioni migliorano ma la visibilità cala: parte della domanda sugli stessi temi è plausibilmente intercettata dagli articoli del blog. Link interni e call to action dagli articoli sono il modo per riportare questo traffico verso la prenotazione.</p>
+      <table><thead><tr><th>Servizio</th><th>Click</th><th>Δ</th></tr></thead><tbody><tr><td class='l'>Radiografia a domicilio</td><td>678 <small>(da 822)</small></td><td><span class="badge delta-down">−18%</span></td></tr><tr><td class='l'>Infermieri a domicilio</td><td>396 <small>(da 214)</small></td><td><span class="badge delta-up">+85%</span></td></tr><tr><td class='l'>Visite mediche a domicilio</td><td>347 <small>(da 561)</small></td><td><span class="badge delta-down">−38%</span></td></tr><tr><td class='l'>Cardiologia a domicilio</td><td>341 <small>(da 439)</small></td><td><span class="badge delta-down">−22%</span></td></tr><tr><td class='l'>Ecografia a domicilio</td><td>267 <small>(da 456)</small></td><td><span class="badge delta-down">−41%</span></td></tr><tr><td class='l'>Indice servizi</td><td>127 <small>(da 276)</small></td><td><span class="badge delta-down">−54%</span></td></tr></tbody></table>
+    </div>
+    <div class="card cmp">
+      <h3>Pagine location</h3>
+      <div class="big"><span class="v">3.578</span><span class="badge delta-up">+160%</span></div>
+      <div class="from">click, da 1.375 · posizione media da 17,0 a 11,3</div>
+      <p>È il risultato più netto del trimestre: le pagine che portano traffico passano da 32 a 90, e 82 su 91 sono in crescita. Con una posizione media di 11,3 sono ancora sulla soglia della prima pagina.</p>
+      <p class="pg">Crescono di più: Cagliari (88 click, nuova), Foggia (62 click, nuova), Sassari (58 click, nuova), Monza e Brianza (111 click, da 55), Verona (102 click, da 47).</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Posizionamento delle keyword principali</h2>
+  <p class="lead">Le keyword principali sono ai vertici dei risultati: la maggior parte delle query che portano traffico è in posizione 1-3.</p>
+  <div class="note"><strong>Nota sui dati GSC:</strong> i dati sono imprecisi sulle keyword a basso volume, e molte query non vengono riportate. Le query analizzate valgono circa il 13% dei click delle pagine: vanno lette come indicazione del posizionamento, non come totale del traffico.</div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Keyword</th><th>Click</th><th>Impression</th><th>CTR</th><th>Posizione</th></tr></thead>
+    <tbody><tr><td class='l'>ecografia addome completo preparazione</td><td>926</td><td>8.291</td><td>11,2%</td><td>1,37</td></tr><tr><td class='l'>preparazione ecografia addome completo</td><td>783</td><td>6.240</td><td>12,6%</td><td>1,39</td></tr><tr><td class='l'>angina pectoris sintomi</td><td>453</td><td>3.451</td><td>13,1%</td><td>1,30</td></tr><tr><td class='l'>saturimetro valori</td><td>419</td><td>2.717</td><td>15,4%</td><td>1,27</td></tr><tr><td class='l'>eco addome completo preparazione</td><td>376</td><td>3.416</td><td>11,0%</td><td>1,34</td></tr><tr><td class='l'>saturazione ossigeno</td><td>289</td><td>3.429</td><td>8,4%</td><td>1,34</td></tr><tr><td class='l'>saturazione bassa</td><td>241</td><td>2.453</td><td>9,8%</td><td>1,44</td></tr><tr><td class='l'>ossigeno nel sangue</td><td>191</td><td>2.368</td><td>8,1%</td><td>1,41</td></tr><tr><td class='l'>polisonnografia costo</td><td>146</td><td>1.757</td><td>8,3%</td><td>2,01</td></tr><tr><td class='l'>fibrillazione atriale parossistica</td><td>114</td><td>1.756</td><td>6,5%</td><td>1,36</td></tr></tbody>
+  </table></div>
+  <h3 class="sub">Opportunità: termini generici tra la 5ª e la 10ª posizione</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Keyword</th><th>Click</th><th>Impression</th><th>CTR</th><th>Posizione</th></tr></thead>
+    <tbody><tr><td class='l'>pressione alta</td><td>55</td><td>18.978</td><td>0,3%</td><td>7,33</td></tr><tr><td class='l'>ecografia addome completo</td><td>104</td><td>17.192</td><td>0,6%</td><td>7,55</td></tr><tr><td class='l'>ecocolordoppler</td><td>33</td><td>14.300</td><td>0,2%</td><td>6,99</td></tr><tr><td class='l'>polisonnografia</td><td>83</td><td>13.063</td><td>0,6%</td><td>5,96</td></tr><tr><td class='l'>ecocardiogramma</td><td>43</td><td>10.356</td><td>0,4%</td><td>5,81</td></tr><tr><td class='l'>angina pectoris</td><td>89</td><td>9.429</td><td>0,9%</td><td>4,98</td></tr><tr><td class='l'>dispnea</td><td>56</td><td>9.183</td><td>0,6%</td><td>3,84</td></tr><tr><td class='l'>bpco cos'è</td><td>60</td><td>7.751</td><td>0,8%</td><td>5,56</td></tr></tbody>
+  </table></div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="brand">medicilio</div><div>La tua salute sempre con te · Dati: Google Search Console</div></div></footer>
+
+<script>
+new Chart(document.getElementById('yearChart'),{
+  type:'bar',
+  data:{labels:["ott 25", "nov 25", "dic 25", "gen 26", "feb 26", "mar 26", "apr 26", "mag 26", "giu 26", "lug 26", "ago 26", "set 26*"],datasets:[{label:'Click',data:[20212, 26247, 27570, 37472, 38836, 42322, 40362, 45681, 42701, 41799, 35157, 40489],backgroundColor:'#1A8096',borderRadius:6,maxBarThickness:46}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw.toLocaleString('it-IT')+' click'}}},
+    scales:{y:{beginAtZero:true,grid:{color:'#e5eef0'},ticks:{callback:v=>(v/1000)+'K'}},x:{grid:{display:false}}}}
+});
+</script>
+</body></html>
